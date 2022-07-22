@@ -7,20 +7,19 @@
 
   <body>
     <header class="page-header">
-      <a class="page-header-logo" title="Логотип на главной странице.">
-        <img src="images/page-header-logo.png" width="139" height="70" alt="Логотип на главной странице.">
-      </a>
-
       <nav class="page-header-nav">
+        <a class="page-header-logo" href="index.html">
+          <img src="images/page-header-logo.png" width="139" height="70" alt="Логотип Седоны.">
+        </a>
         <ul class="page-header-nav-list">
           <li class="page-header-nav-item">
-            <a class="page-header-nav-link" href="#">Главная</a><!-- active -->
+            <a class="page-header-nav-link" href="index.html">Главная</a>
           </li>
           <li class="page-header-nav-item">
             <a class="page-header-nav-link" href="#">О Седоне</a>
           </li>
           <li class="page-header-nav-item">
-            <a class="page-header-nav-link" href="#">Гостиницы</a>
+            <a class="page-header-nav-link page-header-nav-link-current" href="#">Гостиницы</a><!-- active -->
           </li>
         </ul>
       </nav>
@@ -50,7 +49,77 @@
 
 
     <main class="main-inner">
-      <!-- доделать main-inner -->
+      <header class="inner-header">
+        <h1 class="inner-header-title">Гостиницы Седоны</h1>
+        <ol class="breadcrumbs">
+          <li class="breadcrumbs-item">
+            <a class="breadcrumbs-link" href="index.html">Главная</a>
+          </li>
+          <li class="breadcrumbs-item">
+            <a class="breadcrumbs-link">Гостиницы</a>
+          </li>
+        </ol>
+      </header>
+
+      <section class="catalog-hotels">
+        <h2 class="visually-hidden">Список отелей с фильтрами</h2>
+        <form class="catalog-filter" action="https://echo.htmlacademy.ru/">
+
+          <fieldset class="catalog-filter-group">
+            <legend class="catalog-filter-title">Инфраструктура:</legend>
+            <label class="control">
+              <input class="control-input" type="checkbox" name="pool" checked>
+              Бассейн
+
+              <input class="control-input" type="checkbox" name="parking" checked>
+              Парковка
+
+              <input class="control-input" type="checkbox" name="wifi">
+              Wi-Fi
+            </label>
+          </fieldset>
+
+          <fieldset class="catalog-filter-group">
+            <legend class="catalog-filter-title">Тип жилья:</legend>
+            <label class="control">
+              <input class="control-input" type="radio" name="product-group" checked>
+              Гостинница
+
+              <input class="control-input" type="radio" name="product-group">
+              Мотель
+
+              <input class="control-input" type="radio" name="product-group">
+              Аппартаменты
+            </label>
+          </fieldset>
+
+          <fieldset class="catalog-filter-group">
+            <legend class="catalog-filter-title">Стоимость, ₽:</legend>
+          </fieldset>
+
+          <button class="button" type="submit">Показать</button>
+          <button class="button" type="reset">Сбросить</button>
+        </form>
+
+        <p class="catalog-filter-result">Найдено гостиниц: 38</p>
+
+        <select class="select-control" aria-label="Сортировка">
+          <option value="cheap">Сначала дешевые</option>
+          <option value="expensive">Сначала дорогие</option>
+          <option value="popular">Сначала популярные</option>
+        </select>
+
+        <a class="button button-black-border" href="#"><!-- button-black-border - ВОЗМОЖНО изменить название класса-->
+          <span class="visually-hidden">Показать карточки</span>
+        </a>
+        <a class="button" href="#">
+          <span class="visually-hidden">Показать слайдшоу</span>
+        </a>
+        <a class="button" href="#">
+          <span class="visually-hidden">Показать список</span>
+        </a>
+
+      </section>
     </main>
 
 
@@ -59,19 +128,19 @@
         <h2 class="visually-hidden">Соцсети</h2>
         <ul class="footer-socials-list">
           <li class="footer-socials-item">
-            <a href="">VK
+            <a href="https://vk.com/htmlacademy">VK
             <!-- добавить svg -->
               
             </a>
           </li>
           <li class="footer-socials-item">
-            <a href="">Telegram
+            <a href="https://t.me/htmlacademy">Telegram
             <!-- добавить svg -->
               
             </a>
           </li>
           <li class="footer-socials-item">
-            <a href="">Youtube
+            <a href="https://www.youtube.com/user/htmlacademyru">Youtube
             <!-- добавить svg -->
               
             </a>
